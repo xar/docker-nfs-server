@@ -11,8 +11,8 @@ ADD nfs_setup.sh /usr/local/bin/nfs_setup
 
 VOLUME /exports
 
-RUN echo "nfs 2049/tcp
-nfs 2049/udp" >> /etc/services
+RUN echo "nfs 2049/udp" >> /etc/services
+RUN echo "nfs 2049/tcp" >> /etc/services
 
 EXPOSE 111/udp 2049/tcp
 
